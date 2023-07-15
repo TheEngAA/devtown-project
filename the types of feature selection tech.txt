@@ -2,15 +2,29 @@ the types of feature selection techniques in points:
 
 Filter methods select features based on their statistical properties, such as their correlation with the target variable or their variance.
 Wrapper methods select features by iteratively building and evaluating models with different subsets of features.
+
+
 Here are some factors to consider when choosing a feature selection technique:
 
 The size of your dataset. If your dataset is large, you may want to use a filter method to reduce the number of features before using a wrapper method.
 The type of machine learning model you are using. Some machine learning models, such as decision trees, are able to handle a large number of features, while others, such as support vector machines, are more sensitive to the number of features.
 The interpretability of your model. If you need to be able to understand how your model makes predictions, you may want to use a feature selection technique that preserves the interpretability of the model.
+
+
+
 Here are some key techniques for feature selection that you can explore:
 
-Univariate selection: This technique involves selecting features based on their individual relationship with the target variable. Common statistical tests such as chi-square test, ANOVA, or correlation coefficients can be used to evaluate the significance of each feature independently. The features with the highest scores are selected for further analysis.
-Recursive feature elimination (RFE): RFE is an iterative method that starts with all features and successively removes the least important ones based on a model's performance. It works by training the model on the full feature set and recursively eliminating the least significant feature(s) until a desired number of features is reached. This technique is particularly useful when you have a large number of features.
-Principal component analysis (PCA): PCA is a dimensionality reduction technique that transforms a high-dimensional dataset into a lower-dimensional space while preserving the maximum amount of information. It creates new features, known as principal components, which are linear combinations of the original features. By selecting the top principal components that capture the most variance, you can effectively reduce the feature space.
-Feature importance: Some machine learning algorithms provide a way to measure the importance of each feature in the context of the model. Decision trees and ensemble methods like random forests and gradient boosting can assign feature importance scores based on how much each feature contributes to reducing the impurity or error in the model. You can then select the most important features according to these scores.
-L1 regularization (Lasso): Lasso regression applies a penalty to the absolute values of the regression coefficients, encouraging some coefficients to become zero. As a result, it can effectively perform feature selection by shrinking the coefficients of less important features to zero. This technique is especially useful when dealing with high-dimensional datasets.
+Univariate selection: 
+This technique involves selecting features based on their individual relationship with the target variable. Common statistical tests such as chi-square test, ANOVA, or correlation coefficients can be used to evaluate the significance of each feature independently. The features with the highest scores are selected for further analysis.
+
+Recursive feature elimination (RFE): 
+RFE is an iterative method that starts with all features and successively removes the least important ones based on a model's performance. It works by training the model on the full feature set and recursively eliminating the least significant feature(s) until a desired number of features is reached. This technique is particularly useful when you have a large number of features.
+
+Principal component analysis (PCA):
+ PCA is a dimensionality reduction technique that transforms a high-dimensional dataset into a lower-dimensional space while preserving the maximum amount of information. It creates new features, known as principal components, which are linear combinations of the original features. By selecting the top principal components that capture the most variance, you can effectively reduce the feature space.
+
+Feature importance: 
+Some machine learning algorithms provide a way to measure the importance of each feature in the context of the model. Decision trees and ensemble methods like random forests and gradient boosting can assign feature importance scores based on how much each feature contributes to reducing the impurity or error in the model. You can then select the most important features according to these scores.
+
+L1 regularization (Lasso): 
+Lasso regression applies a penalty to the absolute values of the regression coefficients, encouraging some coefficients to become zero. As a result, it can effectively perform feature selection by shrinking the coefficients of less important features to zero. This technique is especially useful when dealing with high-dimensional datasets.
